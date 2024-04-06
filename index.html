@@ -10,13 +10,13 @@
     <div>
         <div class="container">
             <div class="play-button">
-                <img class="button-image" src="/images/play-button.svg" alt="#">
+                <img class="button-image" src="images/play-button.svg" alt="#">
             </div>
         </div>
     </div>
     <div class="video-frame">
-        <video class="video" width="400" height="300" src="/videos/Cassette - My Way (Official Video).mp4">
-            <source src="/videos/Cassette - My Way (Official Video).mp4">
+        <video class="video" width="400" height="300" src="videos/Cassette - My Way (Official Video).mp4">
+            <source src="videos/Cassette - My Way (Official Video).mp4">
         </video>
     </div>
     <script>
@@ -27,13 +27,13 @@
         buttonPlay.addEventListener("click" , function(){
             if(play == false){
                 video.play();
-                buttonPlay.src = "/images/pause-button.svg"
+                buttonPlay.src = "images/pause-button.svg"
                 play = true;
                 console.log("play");
             }
             else{
                 video.pause();
-                buttonPlay.src = "/images/play-button.svg"
+                buttonPlay.src = "images/play-button.svg"
                 play = false;
                 console.log("stop");
             }
