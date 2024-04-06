@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <div class="play-button">
+                <img class="button-image" src="/images/play-button.svg" alt="#">
+            </div>
+        </div>
+    </div>
+    <div class="video-frame">
+        <video class="video" width="400" height="300" src="/videos/Cassette - My Way (Official Video).mp4">
+            <source src="/videos/Cassette - My Way (Official Video).mp4">
+        </video>
+    </div>
+    <script>
+        let buttonPlay = document.querySelector('.play-button img');
+        let video = document.querySelector(".video");
+        let play = false;
+
+        buttonPlay.addEventListener("click" , function(){
+            if(play == false){
+                video.play();
+                buttonPlay.src = "/images/pause-button.svg"
+                play = true;
+                console.log("play");
+            }
+            else{
+                video.pause();
+                buttonPlay.src = "/images/play-button.svg"
+                play = false;
+                console.log("stop");
+            }
+        })
+    </script>
+</body>
+</html>
